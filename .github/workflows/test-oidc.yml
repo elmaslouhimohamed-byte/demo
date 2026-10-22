@@ -17,7 +17,7 @@ jobs:
         
         # 2. Vérification si la réponse contient bien un jeton
         if ! echo "$RESPONSE" | jq -e '.value' > /dev/null; then
-          echo "❌ Erreur de GitHub OIDC. Réponse reçue :"
+          echo "❌ Error de GitHub OIDC. Réponse reçue :"
           echo "$RESPONSE"
           exit 1
         fi
